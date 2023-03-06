@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+  <div class="py-10">
+    <h2 class="text-2xl font-bold mb-4">Scan Result</h2>
+    <div class="bg-white rounded-md p-6">
+      <h3 class="text-lg font-bold mb-2">Tech Stack</h3>
+      <ul class="list-disc pl-4">
+
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Technology</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for key, value in tech_data.items %}
+            <tr>
+              <td>{{ value }}</td>
+              <td>{{ key }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+          {{tech_data}}
+
+      </ul>
+    </div>
+  </div>
+
+
+{% endblock %}
+
